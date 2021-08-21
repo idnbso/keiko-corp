@@ -157,7 +157,7 @@ header .social li:first-child {
 }
 
 header #logo-container {
-    display: inline-block !important;
+    display: block !important;
 }
 
 header #site-navigation-container,
@@ -708,6 +708,9 @@ footer .copyright a {
     }
     header .burger_icon {
         display: block;
+    }
+    header #social-container {
+        display: none !important;
     }
     header nav {
         width: 100%;
