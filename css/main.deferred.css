@@ -1,0 +1,8 @@
+#logo-container {
+    display: inline-block !important;
+}
+
+#site-navigation-container,
+#social-container {
+    display: table-cell !important;
+}
