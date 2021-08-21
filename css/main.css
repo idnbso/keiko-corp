@@ -36,6 +36,7 @@ footer {
 /*		General CSS		*/
 
 body {
+    display: block;
     background: #20866e;
     padding: 0px;
     margin: 0px;
@@ -153,6 +154,15 @@ header .social li {
 
 header .social li:first-child {
     margin: 0;
+}
+
+header #logo-container {
+    display: inline-block !important;
+}
+
+header #site-navigation-container,
+header #social-container {
+    display: table-cell !important;
 }
 
 
