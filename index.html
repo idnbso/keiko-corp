@@ -14,10 +14,6 @@
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="css/owl.transitions.css" />
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
-    <link rel="stylesheet" type="text/css" href="css/animate.css" />
-
     <script type="text/javascript" src="js/jquery.js" defer></script>
     <script type="text/javascript" src="js/ajaxchimp.js" defer></script>
 
@@ -308,19 +304,16 @@
         <p class="copyright animated wow fadeIn" data-wow-duration="2s"> <strong>Pixelhint</strong></p>
 
         <script type="text/javascript">
-            var bootstrapDeferred = document.createElement('link');
-            bootstrapDeferred.rel = 'stylesheet';
-            bootstrapDeferred.href = './css/bootstrap.css';
-            bootstrapDeferred.type = 'text/css';
+            var cssFilesNames = ['bootstrap', 'main', 'owl.transitions', 'owl.carousel', 'animate'];
+            var goDefer = document.getElementsByTagName('script')[0];
+            for (var i = 0; i < cssFilesNames.length; i++) {
+                var deferred = document.createElement('link');
+                deferred.rel = 'stylesheet';
+                deferred.href = './css/' + cssFilesNames[i] + '.css';
+                deferred.type = 'text/css';
 
-            var mainDeferred = document.createElement('link');
-            mainDeferred.rel = 'stylesheet';
-            mainDeferred.href = './css/main.css';
-            mainDeferred.type = 'text/css';
-
-            var godefer = document.getElementsByTagName('link')[0];
-            godefer.parentNode.insertBefore(bootstrapDeferred, godefer);
-            godefer.parentNode.insertBefore(mainDeferred, godefer);
+                goDefer.parentNode.insertBefore(deferred, goDefer);
+            }
         </script>
     </footer>
     <!--  End Footer Section  -->
